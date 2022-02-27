@@ -6,12 +6,11 @@ class Cars {
         this.color = color;
     }
 
-    carsInfo() {
-        return (
-            `Model - ${this.model} 
-Year of manufacture - ${this.manufactureYear}  
-Engine power - ${this.enginePower} 
-Сar color -  ${this.color}`);
+    carsInfo() { 
+        document.write(`<br><b>Model</b> - ${this.model} <br>
+        <b>Year of manufacture -</b>  ${this.manufactureYear}  <br>
+        <b>Engine power -</b>  ${this.enginePower} <br>
+        <b>Color -</b>   ${this.color}`);
     }
 }
 
@@ -22,22 +21,21 @@ class ElectroCars extends Cars {
     }
 
     carsInfo() {
-        return super.carsInfo() + ` Battery capacity - ${this.batteryCapacity}`
+        super.carsInfo()
+        document.write(`<br><b>Battery capacity -</b>  ${this.batteryCapacity}<br>`)
     }
 
     promote() {
-        return (
-            `Buy ${this.model} - Burn rubber, not gasoline! 
-            `);
+        document.write(`<br><br><br><br>
+        <b>Buy ${this.model} - Burn rubber, not gasoline!</b>
+        <br>`);
     }
 }
 
 
 const lexus = new Cars('LEXUS LC', '2022', '434/324 (л.c./кВт)', 'Black');
-console.log(lexus.carsInfo());
+lexus.carsInfo();
 
 const tesla = new ElectroCars('Tesla Model S Long Range', '2022', '434/324 (л.c./кВт)', 'orange', '100 кВт·ч');
-console.log(tesla.carsInfo());
-console.log(tesla.promote());
-
-
+tesla.promote();
+tesla.carsInfo();
