@@ -33,4 +33,5 @@ class Restaurant {
   }
   
   const beshBarmak = new Restaurant("Besh Barmak", "kyrgyz");
+  console.log(beshBarmak.showInfo());
   console.log(beshBarmak.isOpen());
