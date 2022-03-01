@@ -1,8 +1,8 @@
 class Restaurant {
-  constructor(name, cusineType, served = 0) {
+  constructor(name, cusineType) {
     this.name = name;
     this.cusineType = cusineType;
-    this.served = served;
+    this.served = 0;
   }
 
   showInfo() {
@@ -54,7 +54,8 @@ const lunch = new Restaurant("Lunch", "American");
 
 lunch.showInfo();
 lunch.isOpen();
-
 lunch.serve();
 lunch.setServed(10);
 lunch.showTotalServed();
+
+
